@@ -13,10 +13,6 @@ jobs:
       - name: Check out
         uses: actions/checkout@v1
 
-      - name: Install
-        run: | 
-          pip3 install jinja2 pillow
-
       - name: Generate thumbnails
         run: |
           cp -r images thumbnails
@@ -32,10 +28,9 @@ jobs:
           mkdir dist
           cp index.html dist 
           cp style.css dist
-          cp images dist
-          cp thumbnails dist
+          cp -r images dist
+          cp -r thumbnails dist
               
- 
       - name: Publish generated content to GitHub Pages
         uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
         with:
