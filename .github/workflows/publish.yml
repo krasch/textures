@@ -15,8 +15,6 @@ jobs:
 
       - name: Install
         run: | 
-          apt-get update -qy
-          apt-get install -y python3 python3-pip imagemagick
           pip3 install jinja2 pillow
 
       - name: Generate thumbnails
