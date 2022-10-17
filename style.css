@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.images {
+  /*width: 600px;*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+img {
+   height: 100px;
+   width: 100px;
+   object-fit: cover;
+   display: block; /* removes small margin below image*/
+   padding: 3px;
+}
+
